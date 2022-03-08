@@ -9,9 +9,15 @@ import SwiftUI
 
 struct Home: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ResponsiveView { prop in
+//            Text(prop.isLandscape ? "Landscape" : "Potrait")
+            HStack(spacing: 0) {
+                SideBar(prop: prop)
+            }
+        }
     }
 }
+
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
